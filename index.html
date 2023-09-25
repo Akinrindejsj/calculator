@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body  class="back">
+    <div class="div2">
+        
+        <input class="put" id="get" type="text" readonly ></input>
+        
+        
+        
+        <br></br>
+        
+        <button class="div1" onclick="change(9)">9</button>
+        <button class="div1" onclick="change(8)">8</button>
+        <button class="div1" onclick="change(7)">7</button>
+        <button class="div1" onclick="plus()">+</button>
+        <br></br>
+
+    <button class="div1" onclick="change(6)">6</button>
+    <button class="div1" onclick="change(5)">5</button>
+    <button class="div1" onclick="change(4)">4</button>
+    <button class="div1" onclick="subtract()">-</button>
+    <br></br>
+    <button class="div1" onclick="change(3)">3</button>
+    <button class="div1" onclick="change(2)">2</button>
+    <button class="div1" onclick="change(1)">1</button>
+    <button class="div1" onclick="times()">*</button>
+    <br></br>
+    <button class="div1" onclick="change(0)">0</button>
+    <button class="div1" onclick="divide()">/</button>
+    <button class="div1" onclick="equal()">=</button>
+    <br></br>
+    <button class="div4" onclick="Delete ()">Clear</button>
+    </div>
+    
+</body>
+<script>
+    function change (x){
+        
+      document.getElementById("get").value+=x
+      
+    }
+    function plus(){
+        document.getElementById("get").value+="+"
+    }
+    function subtract(){
+        document.getElementById("get").value+="-"
+    }
+    function times (){
+        document.getElementById("get").value+="*"
+    }
+    function divide (){
+        document.getElementById("get").value+="/"
+    }
+    function equal (){
+     document.getElementById("get").value=eval(document.getElementById("get").value)
+    }
+
+    function Delete (){
+        document.getElementById("get").value=""
+    }
+    //to change the style onclick of a button 
+    //we use document.grtElementById('idname').style.whatever style=
+</script>
+</html>
